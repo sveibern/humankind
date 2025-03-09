@@ -1,0 +1,107 @@
+.global-footer {
+    margin-top: auto;
+    padding-block: rem(32);
+    background-color: var(--color-profile);
+    color: var(--color-white);
+    font-size: var(--font-18);
+
+    @include br-lg {
+        padding-block: rem(48);
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "menu" "some" "contact";
+        gap: rem(40) rem(24);
+        padding-inline: rem(24);
+        
+        @include br-md {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "menu contact" "some some";
+        }
+
+        @include br-lg {
+            grid-template-columns: 3.5fr 0.75fr 1fr;
+            grid-template-areas: "menu some contact";
+        }
+    }
+
+    a {
+        color: var(--color-white);
+        display: inline-block;
+        padding-block: rem(4);
+        text-decoration-color: rgba(256,256,256,0.5);
+    }
+
+    &__menu {
+        grid-area: menu;
+
+        .menu {
+            @include br-lg {
+                max-width: rem(600);
+                column-count: 2;
+                gap: rem(32);
+            }
+
+            &-item {
+                break-inside: avoid;
+
+                a {
+                    padding-block: 0 rem(16);
+                    font-size: var(--font-20);
+                    font-weight: 700;
+
+                    @include br-lg {
+                        font-size: var(--font-24);
+                    }
+                }
+            }
+        }
+    }
+
+    &__some {
+        grid-area: some;
+
+        ul {
+            @include br-md {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: rem(32);
+            }
+
+            @include br-lg {
+                display: block;
+            }
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: rem(10);
+
+                    svg {
+                        fill: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+
+    &__contact {
+        grid-area: contact;
+
+        div {
+            break-inside: avoid;
+
+            &:not(:last-child) {
+                margin-bottom: rem(16);
+            }
+
+            dt {
+                opacity: 0.65;
+            }
+        }
+    }
+}

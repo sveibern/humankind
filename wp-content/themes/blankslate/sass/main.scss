@@ -1,0 +1,38 @@
+/*
+Theme Name: humankind
+Author: Sveinung Berntsen
+Description: Mal for humankind.no
+Version: 1
+Text Domain: humankind
+*/
+
+// Settings
+@import 'settings/mixins';
+@import 'settings/vars';
+
+// Base
+@import 'base/reset';
+@import 'base/base';
+@import 'base/page';
+@import 'base/header';
+@import 'base/footer';
+@import 'base/entry';
+@import 'base/post';
+@import 'base/form';
+
+// Modules
+@import 'modules/comments';
+@import 'modules/donation';
+@import 'modules/hero';
+@import 'modules/newsletter';
+@import 'modules/woocommerce';
+
+// Blocks
+@import 'blocks/quote-block';
+@import 'blocks/group-block';
+@import 'blocks/cover-block';
+@import 'blocks/gallery-block';
+@import 'blocks/embed-block';
+@import 'blocks/media-text-block';
+@import 'blocks/latest-posts-block';
+@import 'blocks/details-block';

@@ -1,0 +1,86 @@
+.wpcf7, 
+.form-box {
+    background-color: var(--color-neutral-light);
+    max-width: var(--medium-width);
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: rem(15);
+    padding: rem(30);
+
+    @include br-md {
+        padding: rem(40) rem(80);
+    }
+
+    @include br-lg {
+        padding: rem(60) rem(120);
+    }
+
+    input[type=text], 
+    input[type=number],
+    input[type=email],
+    textarea {
+        background-color: white;
+        border: 1px solid var(--color-neutral);
+        border-radius: rem(5);
+        padding: rem(10);
+        font-size: var(--font-16);
+        font-family: var(--font-sans-serif);
+        width: 100%;
+
+        @include br-md {
+            padding: rem(20);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-neutral);
+        }
+    }
+
+    fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-form-control {
+        margin: rem(5) 0 rem(30);
+        display: block;
+    }
+
+    &-list-item {
+        font-size: var(--font-16);
+        font-family: var(--font-sans-serif);
+        display: block;
+        margin: rem(10) 0;
+
+        label {
+            display: flex;
+            align-items: center;
+
+            input {
+                width: rem(18);
+                height: rem(18);
+                margin-right: rem(8);
+            }
+        }
+    }
+
+    .wpcf7-response-output {
+        background-color: var(--color-profile-light);
+        padding: rem(40) !important;
+        text-align: center;
+        margin: rem(40) 0 0 !important;
+        font-size: var(--font-18);
+        line-height: 1.5;
+        border: none !important;
+    }
+
+    &-not-valid-tip {
+        margin-top: rem(4);
+    }
+}
+
+.form-submit .submit, 
+.wpcf7 .wpcf7-submit {
+    @include button;
+}

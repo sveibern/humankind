@@ -1,0 +1,147 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    background-color: white;
+    color: var(--color-neutral-dark);
+    font-size: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans-serif);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+svg,
+img {
+    vertical-align: middle;
+}
+
+button, 
+input[type=button], 
+input[type=submit] {
+    cursor: pointer;
+    font-family: var(--font-sans-serif);
+    color: black;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent
+}
+
+h1, .h1 {
+    line-height: 1.2;
+    font-size: var(--font-32);
+    text-wrap: balance;
+
+    @include br-lg {
+        font-size: var(--font-42);
+    }
+}
+
+h2, .h2 {
+    font-size: var(--font-24);
+    line-height: 1.3;
+
+    @include br-lg {
+        font-size: var(--font-32);
+    }
+}
+
+h3, .h3 {
+    font-size: var(--font-20);
+
+    @include br-lg {
+        font-size: var(--font-24);
+    }
+}
+
+a {
+    color: var(--color-profile);
+    text-underline-offset: 20%;
+    text-decoration-color: rgba(13, 115, 80, 0.5);
+    text-decoration-thickness: 1px;
+
+    &:hover {
+        text-decoration-thickness: 2px;
+    }
+
+    &:focus-visible {
+        text-decoration-thickness: 3px;
+    }
+}
+
+a, button, input {
+    outline: none;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+*[hidden] {
+    display: none !important;
+}
+
+.sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+.link-wrapper a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-profile);
+    font-weight: 700;
+}
+
+.button-wrapper {
+    margin-top: rem(48);
+    text-align: center;
+
+    a {
+        @include button;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-profile);
+        color: var(--color-profile);
+        font-weight: 400;
+    }
+}
+
+.m-b-8 {
+    margin-bottom: rem(8);
+}
+
+.margin-bottom {
+    margin-bottom: rem(20);
+}
+
+.margin-bottom--lg {
+    margin-bottom: rem(40);
+}
+
+.margin-bottom--xl {
+    margin-bottom: rem(60);
+}
+
+.wrapper {
+    max-width: calc(var(--full-width) + #{rem(48)});
+    margin-right: auto;
+    margin-left: auto;
+    padding-inline: rem(24);
+    width: 100%;
+}
+
+.logged-in-as {
+    font-size: var(--font-14);
+    font-family: var(--font-sans-serif);
+}

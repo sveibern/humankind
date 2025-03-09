@@ -1,0 +1,29 @@
+#content .wp-block-gallery {
+    margin: rem(56) rem(-24);
+    overflow: hidden;
+
+    @include br-lg {
+        margin: rem(56) 0;
+        border-radius: rem(16);
+    }
+
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .wp-block-image {
+        margin: 0 !important;
+
+        @include br-md-down {
+            width: 100% !important;
+        }
+
+        .wp-element-caption {
+            background: rgba(255,255,255,0.7);
+            color: black;
+            padding: rem(8) rem(16);
+            font-size: var(--font-16);
+            text-shadow: none;
+        }
+    }
+}

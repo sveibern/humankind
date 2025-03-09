@@ -1,0 +1,13 @@
+.wp-block-quote {
+    text-align: center;
+    font-weight: 300;
+    max-width: rem(520);
+    margin: rem(80) auto;
+    line-height: 1.4;
+    font-size: var(--font-24);
+
+    @include br-md {
+        font-size: var(--font-32);
+        margin: rem(120) auto;
+    }
+}

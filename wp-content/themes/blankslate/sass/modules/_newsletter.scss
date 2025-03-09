@@ -1,0 +1,94 @@
+.newsletter {
+	background-color: var(--color-white);
+	padding: rem(48);
+    max-width: rem(500);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(24);
+
+    @include br-lg {
+        max-width: none;
+        grid-template-columns: auto 1.5fr 1fr;
+        align-items: center;
+        gap: rem(48);
+        border: 1px dashed var(--color-neutral);
+        border-radius: rem(16);
+        margin-block: rem(56);
+    }
+
+    &__icon {
+        text-align: center;
+
+        svg {
+            fill: var(--color-profile);
+            opacity: .7;
+
+            @include br-lg {
+                width: rem(90);
+                height: rem(90);
+            }
+       }
+    }
+
+    &__content {
+        text-align: center;
+
+        @include br-lg {
+            text-align: left;
+        }
+
+        h2 {
+            font-size: var(--font-32);
+            line-height: 1.3;
+            margin-bottom: rem(16);
+            text-wrap: balance;
+        }
+
+        p {
+            margin-bottom: rem(24);
+            font-size: var(--font-20);
+            text-wrap: balance;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__form {
+        .input {
+	    	@include input;
+        }
+
+        .btn {
+            @include button;
+            width: 100%;
+        }
+    }
+}
+
+.mc4wp-response {
+	background-color: var(--color-white);
+	padding: rem(48);
+    max-width: rem(500);
+    margin-inline: auto;
+
+    &:not(:has(.mc4wp-alert)) {
+        display: none;
+    }
+
+    @include br-lg {
+        max-width: none;
+        border: 1px dashed var(--color-neutral);
+        border-radius: rem(16);
+        margin-block: rem(56);
+    }
+
+    .mc4wp-alert {
+        max-width: rem(400);
+        margin: auto;
+        font-size: var(--font-24);
+        text-align: center;
+    }
+}

@@ -1,0 +1,68 @@
+.wp-block-group {
+    &--principle {
+        margin-inline: rem(-24);
+        padding: rem(48);
+        text-align: center;
+
+        @include br-lg {
+            margin-inline: 0;
+            border-radius: rem(16);
+            margin-block: rem(56);
+        }
+
+        p {
+            text-wrap: balance;
+            margin-bottom: rem(24);
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
+    &--principle {
+        background-color: var(--color-profile-light);
+
+        .wp-block-heading {
+            font-size: rem(72);
+            color: var(--color-profile);
+        }
+
+        p {
+            font-size: var(--font-24);
+
+            a {
+                font-size: var(--font-20);
+            }
+        }
+    }
+
+    &--latest-news {
+        &:not(:first-child) {
+            margin-top: rem(56);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(56);
+        }
+
+        .wp-block-group__inner-container {
+            display: block;
+        }
+    }
+
+    &--faq {
+        background-color: var(--color-bg);
+        margin-inline: rem(-24);
+        margin-block: rem(32);
+        padding: rem(32) rem(24);
+
+        @include br-lg {
+            border-radius: rem(16);
+            padding: rem(32) rem(40);
+            max-width: var(--medium-width);
+            margin-inline: auto;
+            margin-block: rem(56);
+        }
+    }
+}

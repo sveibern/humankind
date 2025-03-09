@@ -1,0 +1,32 @@
+.wp-block-details {
+    margin-block: rem(12);
+    font-size: var(--font-20);
+
+    summary {
+        list-style: none;
+        
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::before {
+            content: '+';
+            width: rem(24);
+            height: rem(24);
+            border: 2px solid var(--color-profile);
+            color: var(--color-profile);
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: rem(8);
+            font-size: var(--font-24);
+        }
+    }
+
+    p {
+        padding-left: rem(36);
+        padding-block: rem(8) rem(16);
+        font-style: italic;
+    }
+}

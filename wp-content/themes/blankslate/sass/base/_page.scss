@@ -1,0 +1,25 @@
+.page-title,
+.product-header {
+    background-color: var(--color-profile-medium);
+    padding: rem(24) rem(40);
+    margin-block: 0 rem(24);
+    margin-inline: rem(-24);
+
+    @include br-lg {
+        margin-inline: 0;
+        margin-block: rem(24) rem(40);
+        border-radius: rem(16);
+    }
+}
+
+.page-content {
+    padding: rem(60) rem(30);
+
+    @include br-sm {
+        padding: rem(60) rem(40);
+    }
+
+    @include br-lg {
+        padding: rem(60) rem(80);
+    }
+}

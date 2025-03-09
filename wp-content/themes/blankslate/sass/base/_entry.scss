@@ -1,0 +1,25 @@
+.entry-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .wp-post-image {
+        order: -1;
+    }
+
+    .entry-title-wrapper {
+        background-color: var(--color-profile-light);
+        padding: rem(32) rem(24);
+    }
+}
+
+.entry-content {
+    > h2 {
+        margin-top: rem(50);
+        margin-bottom: rem(8);
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

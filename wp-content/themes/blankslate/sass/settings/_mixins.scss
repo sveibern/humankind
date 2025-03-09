@@ -1,0 +1,130 @@
+// Breakpoints
+
+@mixin br-xl {
+    @media only screen and (min-width: 75em) {
+        @content;
+    }
+}
+
+@mixin br-lg {
+    @media only screen and (min-width: 60em) {
+        @content;
+    }
+}
+  
+@mixin br-md {
+    @media only screen and (min-width: 40em) {
+        @content;
+    }
+}
+
+@mixin br-md-plus {
+    @media only screen and (min-width: 48em) {
+        @content;
+    }
+}
+
+@mixin br-md-down {
+    @media only screen and (max-width: 39.9375em) {
+        @content;
+    }
+}
+  
+@mixin br-sm {
+    @media only screen and (min-width: 30em) {
+        @content;
+    }
+}
+
+@mixin br-block-down {
+    @media only screen and (max-width: 37.5em) {
+        @content;
+    }
+}
+
+  
+// Fonts
+@mixin font-size($sizeValue: 16) {
+    font-size: ($sizeValue) + px;
+    font-size: $sizeValue/16 + rem;
+ }
+
+
+ // Rem
+ $base: 16;
+
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($base)}rem;
+}
+
+// Button
+@mixin button {
+    background-color: var(--color-profile);
+    border: none;
+    color: var(--color-white);
+    font-weight: 700;
+    padding: rem(8) rem(32);
+    border-radius: rem(23);
+    font-size: var(--font-20);
+    transition: outline .2s ease-in-out;
+    line-height: 1.5;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+
+    &:hover,
+    &:focus {
+        outline: 2px solid var(--color-profile);
+        outline-offset: 2px;
+    }
+}
+
+@mixin shop-button {
+    background-color: var(--color-support);
+    border: none;
+    color: var(--color-white);
+    font-weight: 700;
+    padding: rem(8) rem(32);
+    border-radius: rem(23);
+    font-size: var(--font-18);
+    transition: outline .2s ease-in-out;
+    line-height: 1.5;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+
+    &:hover,
+    &:focus {
+        outline: 2px solid var(--color-support);
+        outline-offset: 2px;
+    }
+}
+
+// Input
+@mixin input {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-neutral);
+    border-radius: rem(8);
+    padding: rem(12);
+    font-size: var(--font-18);
+    font-family: var(--font-sans-serif);
+    margin-bottom: rem(24);
+    width: 100%;
+
+    &:focus {
+        border-color: var(--color-neutral-dark);
+        outline: 1px solid var(--color-neutral-dark);
+    }
+}
