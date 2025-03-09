@@ -3,7 +3,7 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php get_template_part('inc/hero-project'); ?>
+    <?php get_template_part('inc/hero'); ?>
     
     <div class="entry-content">
       <?php the_content(); ?>
