@@ -55,8 +55,7 @@
 
     &__submit {
         button {
-            @include button;
-            background-color: #ff5b24;
+            @include vipps-button;
         }
     }
 }

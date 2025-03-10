@@ -112,6 +112,29 @@
     }
 }
 
+@mixin vipps-button {
+    background-color: var(--color-vipps);
+    border: none;
+    color: var(--color-white);
+    font-weight: 700;
+    padding: rem(8) rem(32);
+    border-radius: rem(23);
+    font-size: var(--font-18);
+    transition: outline .2s ease-in-out;
+    line-height: 1.5;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+
+    &:hover,
+    &:focus {
+        outline: 2px solid var(--color-vipps);
+        outline-offset: 2px;
+    }
+}
+
 // Input
 @mixin input {
     background-color: var(--color-white);

@@ -37,6 +37,8 @@
         }
 
         .wp-block-latest-posts__post-excerpt {
+            margin: 0;
+            
             p {
                 font-size: var(--font-18);
                 margin: 0;
