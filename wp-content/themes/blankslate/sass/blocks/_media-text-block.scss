@@ -1,6 +1,7 @@
 .wp-block-media-text {
     &--donation,
-    &--principle {
+    &--principle,
+    &--gifts {
         grid-template-columns: 1fr;
         text-align: center;
         margin: 0 rem(-24);
@@ -8,6 +9,14 @@
 
         .post__editor & {
             margin-block: rem(56);
+
+            & + .wp-block-media-text {
+                margin-top: rem(-56);
+
+                @include br-lg {
+                    margin-top: rem(56);
+                }
+            }
         }
 
         @include br-lg {
@@ -19,8 +28,6 @@
         }
 
         .wp-block-media-text__media {
-            display: none;
-
             @include br-lg {
                 display: flex;
                 margin: 0;
@@ -66,7 +73,7 @@
         text-align: left;
 
         .wp-block-media-text__content {
-            padding: rem(40) rem(24);
+            padding: rem(32) rem(24) rem(40);
 
             @include br-lg {
                 padding: rem(48);
@@ -98,6 +105,41 @@
             a {
                 font-size: var(--font-20);
             }
+        }
+
+        .wp-block-media-text__media {
+            display: none;
+
+            @include br-lg {
+                display: flex;
+            }
+        }
+    }
+
+    &--gifts {
+        background-color: var(--color-support-light);
+        text-align: left;
+
+        p {
+            font-size: var(--font-20);
+            opacity: .85;
+        }
+
+        .wp-block-media-text__content {
+            padding: rem(32) rem(24) rem(40);
+
+            @include br-lg {
+                padding: rem(48);
+            }
+
+            a {
+                @include shop-button;
+            }
+        }
+
+        .wp-block-heading {
+            font-size: var(--font-32);
+            margin-bottom: rem(8);
         }
     }
 
@@ -145,5 +187,23 @@
                 max-width: rem(150);
             }
         }
+    }
+}
+
+.wp-block-group {
+    .wp-block-media-text:nth-child(2n + 2) {
+        @include br-lg {
+            direction: rtl;
+        }
+    }
+}
+
+.qr-code {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-gap: rem(16);
+
+    &__text {
+        font-size: var(--font-20);
     }
 }

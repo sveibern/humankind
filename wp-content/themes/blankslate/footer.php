@@ -20,14 +20,7 @@
                     </a>
                 </li>
             </ul>
-            <ul>
-                <li>
-                    <a href="#">Salgsbetingelser</a>
-                </li>
-                <li>
-                    <a href="#">Personvern</a>
-                </li>
-            </ul>
+            <?php wp_nav_menu( array( 'theme_location' => 'footermenu' ) ); ?>
         </div>
         <div class="global-footer__contact">
             <dl>

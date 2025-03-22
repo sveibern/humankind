@@ -44,7 +44,10 @@
 
     &__ingress {
         font-size: var(--font-20);
-        margin-bottom: rem(24);
+        
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
     }
 
     &__image {
@@ -83,4 +86,14 @@
             }
         }
     }
+}
+
+.vipps-nr {
+    background-color: var(--color-vipps);
+    color: var(--color-white);
+    padding: rem(16);
+    font-size: var(--font-28);
+    font-weight: 700;
+    text-align: center;
+    border-radius: rem(16);
 }

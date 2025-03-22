@@ -178,6 +178,14 @@
       "oAP" : "\/header.php",
       "oF" : 0
     },
+    "\/inc\/hero-manual.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/inc\/hero-manual.php",
+      "oF" : 0
+    },
     "\/inc\/hero-project.php" : {
       "cB" : 0,
       "ft" : 8192,
