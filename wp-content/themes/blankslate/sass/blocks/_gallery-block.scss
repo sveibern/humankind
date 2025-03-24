@@ -14,6 +14,10 @@
     .wp-block-image {
         margin: 0 !important;
 
+        &::before {
+            display: none;
+        }
+
         @include br-md-down {
             width: 100% !important;
         }
